@@ -9,7 +9,11 @@ module.exports = {
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'sport-blue': '#2563EB',
+      },
+    },
   },
   darkMode: "class",
   plugins: [heroui()],
