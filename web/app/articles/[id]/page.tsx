@@ -1,4 +1,6 @@
-import { Card, CardBody, CardHeader } from "@heroui/react";
+import { ArticleContent } from "@/components/articles/article-content";
+import { getArticleById } from "@/data/sample-articles";
+import { notFound } from "next/navigation";
 
 interface ArticlePageProps {
   params: {
@@ -7,20 +9,24 @@ interface ArticlePageProps {
 }
 
 export default function ArticlePage({ params }: ArticlePageProps) {
+  const article = getArticleById(params.id);
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
-      <Card>
-        <CardHeader>
-          <h1 className="text-3xl font-bold">Article {params.id}</h1>
-        </CardHeader>
-        <CardBody>
-          <p>This is a placeholder for article content with ID: {params.id}</p>
-          <p className="mt-4 text-gray-600">
-            This page will display the full content of an AI-generated sports
-            article.
-          </p>
-        </CardBody>
-      </Card>
+      <ArticleContent
+        title={article.title}
+        subtitle={article.subtitle}
+        content={article.content}
+        sport={article.sport}
+        createdAt={article.createdAt}
+        author={article.author}
+        featuredImage={article.featuredImage}
+        relatedArticles={article.relatedArticles}
+      />
     </div>
   );
 }

@@ -25,3 +25,139 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Article Typography Styles */
+.article-content {
+  @apply max-w-4xl mx-auto;
+}
+
+.article-header {
+  @apply mb-8;
+}
+
+.article-title {
+  @apply text-4xl md:text-5xl font-bold leading-tight mb-4 text-gray-900 dark:text-white;
+}
+
+.article-meta {
+  @apply flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-6;
+}
+
+.article-author {
+  @apply font-medium text-gray-900 dark:text-white;
+}
+
+.article-date {
+  @apply text-gray-500 dark:text-gray-500;
+}
+
+.article-sport-tag {
+  @apply inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wide bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full;
+}
+
+.article-body {
+  @apply max-w-none;
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+  @apply text-gray-900 dark:text-white font-bold mb-4;
+}
+
+.article-body h1 {
+  @apply text-3xl;
+}
+
+.article-body h2 {
+  @apply text-2xl;
+}
+
+.article-body h3 {
+  @apply text-xl;
+}
+
+.article-body p {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg;
+}
+
+.article-body strong {
+  @apply text-gray-900 dark:text-white font-semibold;
+}
+
+.article-body blockquote {
+  @apply border-l-4 border-gray-300 pl-6 italic text-gray-600 dark:text-gray-400 my-6;
+}
+
+.article-body ul,
+.article-body ol {
+  @apply text-gray-700 dark:text-gray-300 mb-6;
+}
+
+.article-body li {
+  @apply mb-2;
+}
+
+.article-body ul {
+  @apply list-disc pl-6;
+}
+
+.article-body ol {
+  @apply list-decimal pl-6;
+}
+
+.article-subtitle {
+  @apply text-xl text-gray-600 dark:text-gray-400 font-medium mb-8 leading-relaxed;
+}
+
+.article-section {
+  @apply mb-8;
+}
+
+.article-section-title {
+  @apply text-2xl font-bold text-gray-900 dark:text-white mb-4;
+}
+
+.article-highlight-box {
+  @apply bg-gray-50 dark:bg-gray-800 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg;
+}
+
+.article-highlight-title {
+  @apply text-lg font-semibold text-gray-900 dark:text-white mb-2;
+}
+
+.article-highlight-content {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.article-related {
+  @apply mt-12 pt-8 border-t border-gray-200 dark:border-gray-700;
+}
+
+.article-related-title {
+  @apply text-xl font-bold text-gray-900 dark:text-white mb-4;
+}
+
+/* Social sharing styles */
+.article-social {
+  @apply flex items-center gap-4 mt-8 pt-6 border-t border-gray-200 dark:border-gray-700;
+}
+
+.social-button {
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors;
+}
+
+.social-button-twitter {
+  @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.social-button-facebook {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.social-button-copy {
+  @apply bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600;
+}
