@@ -1,6 +1,8 @@
 import { HeroSection } from '../components/ui/hero-section'
 import { TheLatestSection } from '../components/ui/the-latest-section'
 import { SportsSection } from '../components/ui/sports-section'
+import { HighlightsSection } from "@/components/highlights/highlights-section";
+import { highlightsArticles } from "@/data/highlights-data";
 
 export default function HomePage() {
   return (
@@ -21,6 +23,9 @@ export default function HomePage() {
           </p>
         </div>
       </div>
+      
+      {/* Highlights Section */}
+      <HighlightsSection articles={highlightsArticles} />
     </main>
   )
 }
