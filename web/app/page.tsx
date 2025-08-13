@@ -1,9 +1,12 @@
 import { HeroSection } from "../components/ui/hero-section";
+import { TheLatestSection } from "../components/ui/the-latest-section";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <HeroSection />
+      
+      <TheLatestSection />
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
