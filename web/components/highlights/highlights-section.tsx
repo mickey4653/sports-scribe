@@ -33,7 +33,7 @@ export function HighlightsSection({ articles }: HighlightsSectionProps) {
   }
 
   return (
-    <section className="highlights-section relative py-8 sm:py-12 bg-white dark:bg-gray-900">
+    <section className="highlights-section relative py-8 sm:py-12 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 sm:mb-8">
