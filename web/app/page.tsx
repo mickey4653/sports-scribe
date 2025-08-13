@@ -1,5 +1,6 @@
-import { HeroSection } from "../components/ui/hero-section";
-import { TheLatestSection } from "../components/ui/the-latest-section";
+import { HeroSection } from '../components/ui/hero-section'
+import { TheLatestSection } from '../components/ui/the-latest-section'
+import { SportsSection } from '../components/ui/sports-section'
 
 export default function HomePage() {
   return (
@@ -8,11 +9,12 @@ export default function HomePage() {
       
       <TheLatestSection />
       
+      {/* Sports Section */}
+      <SportsSection />
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Sport Scribe
-          </h1>
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">Sport Scribe</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             AI-powered sports journalism platform that generates real-time
             sports articles using intelligent multi-agent systems.
@@ -20,5 +22,5 @@ export default function HomePage() {
         </div>
       </div>
     </main>
-  );
+  )
 }
