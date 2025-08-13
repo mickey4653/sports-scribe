@@ -1,5 +1,7 @@
 import { Button } from "@heroui/react";
 import Link from "next/link";
+import { HighlightsSection } from "@/components/highlights/highlights-section";
+import { highlightsArticles } from "@/data/highlights-data";
 
 export default function HomePage() {
   return (
@@ -23,6 +25,9 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      
+      {/* Highlights Section */}
+      <HighlightsSection articles={highlightsArticles} />
     </main>
   );
 }
