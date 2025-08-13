@@ -6,7 +6,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx,mdx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,6 +14,7 @@ module.exports = {
         'inter': ['Inter', 'sans-serif'],
       },
       colors: {
+        'footer-bg': '#333333',
         'sport-blue': '#2563EB',
         'sport-dark': '#333333',
         'sport-orange': '#F97316',
