@@ -12,6 +12,10 @@ module.exports = {
     extend: {
       colors: {
         'sport-blue': '#2563EB',
+        'sport-dark': '#333333',
+        'sport-orange': '#F97316',
+        'sport-green': '#10B981',
+        'sport-yellow': '#F59E0B',
       },
     },
   },
