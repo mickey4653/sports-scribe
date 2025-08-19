@@ -65,7 +65,7 @@ export function ArticleContent({
     <div className="article-content">
       {/* Hero Section with Image Overlay - Full Width */}
       {featuredImage && (
-        <div className="relative h-96 md:h-[500px] mb-8 overflow-hidden">
+        <div className="relative h-96 md:h-[500px] mb-8 overflow-hidden rounded-3xl">
           <Image
             src={featuredImage}
             alt={title}
@@ -73,7 +73,7 @@ export function ArticleContent({
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent "/>
           <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
             <div className="container mx-auto text-center">
               <div className="flex items-center justify-center gap-3 mb-3">
