@@ -24,7 +24,7 @@ export function HeroSection() {
     <section className="max-w-[1024px] mx-auto h-[413px] flex justify-center gap-6 p-8 bg-sport-dark">
       {/* Left Box - Horizontal Slider (2/3 width) */}
       <div className="w-4/6 relative">
-        <div className="relative h-[340px] overflow-hidden rounded-lg bg-gray-200">
+        <div className="relative h-[340px] overflow-hidden rounded-3xl bg-gray-200">
           {/* Current slide */}
           <div className="relative h-full">
             <Image
@@ -81,7 +81,7 @@ export function HeroSection() {
 
       {/* Right Box - Vertical Slider (1/3 width) */}
       <div className="w-1/3 relative">
-        <div className="relative h-[340px] overflow-hidden rounded-lg">
+        <div className="relative h-[340px] overflow-hidden rounded-3xl">
           {/* Stacked slides with vertical animation */}
           {verticalSlides.map((slide, index) => (
             <div

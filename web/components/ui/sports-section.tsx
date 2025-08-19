@@ -53,7 +53,7 @@ export function SportsSection() {
           <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 px-6 py-4">
             {/* Large Article Card (Left) */}
             <div className="w-full lg:w-6/12 relative group">
-              <div className="relative h-[250px] sm:h-[300px] lg:h-[350px] overflow-hidden rounded-b-lg">
+              <div className="relative h-[250px] sm:h-[300px] lg:h-[350px] overflow-hidden rounded-3xl">
                 <Image
                   src={section.articles[0]?.image || ''}
                   alt={section.articles[0]?.title || ''}
@@ -85,7 +85,7 @@ export function SportsSection() {
             <div className="w-full lg:w-6/12 flex flex-row gap-4 sm:gap-6">
               {section.articles.slice(1).map((article) => (
                 <div key={article.id} className="relative group flex-1">
-                  <div className="relative h-[250px] sm:h-[300px] lg:h-[350px] overflow-hidden rounded-lg">
+                  <div className="relative h-[250px] sm:h-[300px] lg:h-[350px] overflow-hidden rounded-3xl">
                     <Image
                       src={article.image}
                       alt={article.title}

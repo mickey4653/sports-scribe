@@ -11,7 +11,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        'sans': ['Work Sans', 'Inter', 'system-ui', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
+        'work-sans': ['Work Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         'footer-bg': '#333333',

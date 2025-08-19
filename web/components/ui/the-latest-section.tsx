@@ -35,7 +35,7 @@ export function TheLatestSection() {
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
           {/* Large image - full width on mobile, 3/4 on desktop */}
           <div className="w-full lg:w-3/4 relative group">
-            <div className="relative h-[200px] sm:h-[250px] lg:h-[300px] overflow-hidden rounded-lg">
+            <div className="relative h-[200px] sm:h-[250px] lg:h-[300px] overflow-hidden rounded-3xl">
               <Image
                 src={latestArticles[0]?.image || ''}
                 alt={latestArticles[0]?.title || 'facebook icon'}
@@ -62,7 +62,7 @@ export function TheLatestSection() {
 
           {/* Small image - full width on mobile, 1/4 on desktop */}
           <div className="w-full lg:w-1/4 relative group">
-            <div className="relative h-[150px] sm:h-[200px] lg:h-[300px] overflow-hidden rounded-lg">
+            <div className="relative h-[150px] sm:h-[200px] lg:h-[300px] overflow-hidden rounded-3xl">
               <Image
                 src={latestArticles[1]?.image || ''}
                 alt={latestArticles[1]?.title || ''}
@@ -92,7 +92,7 @@ export function TheLatestSection() {
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
           {/* Small image - full width on mobile, 2/5 on desktop */}
           <div className="w-full lg:w-2/5 relative group">
-            <div className="relative h-[150px] sm:h-[200px] lg:h-[300px] overflow-hidden rounded-lg">
+            <div className="relative h-[150px] sm:h-[200px] lg:h-[300px] overflow-hidden rounded-3xl">
               <Image
                 src={latestArticles[2]?.image || ''}
                 alt={latestArticles[2]?.title || ''}
@@ -119,7 +119,7 @@ export function TheLatestSection() {
 
           {/* Large image - full width on mobile, 3/5 on desktop */}
           <div className="w-full lg:w-3/5 relative group">
-            <div className="relative h-[200px] sm:h-[250px] lg:h-[300px] overflow-hidden rounded-lg">
+            <div className="relative h-[200px] sm:h-[250px] lg:h-[300px] overflow-hidden rounded-3xl">
               <Image
                 src={latestArticles[3]?.image || ''}
                 alt={latestArticles[3]?.title || ''}

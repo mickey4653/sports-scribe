@@ -95,7 +95,7 @@ export function HighlightsSection({ articles }: HighlightsSectionProps) {
 
         {/* Hero Article Card */}
         <div className="relative mb-6 sm:mb-8">
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden rounded-3xl">
             <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]">
               <Image
                 src={currentArticle.featuredImage}
