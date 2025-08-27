@@ -19,10 +19,10 @@ export function SportsSection() {
       {sportsSections.map((section) => (
         <div key={section.sport} className="mb-12 last:mb-0">
           {/* Header Bar */}
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
             {/* Sport Title with SVG Background */}
-            <div className="relative">
-              <div className={`${getColorClasses(section.color)} rounded-tl-lg p-4 sm:p-6 relative overflow-hidden border-t-[1px] border-l-[1px]  border-black`}>
+            <div className="relative w-full sm:w-auto">
+              <div className={`${getColorClasses(section.color)} w-full sm:w-auto sm:min-w-[540px] lg:min-w-[740px] xl:min-w-[800px] rounded-3xl p-4 sm:p-6 relative overflow-hidden border-[2px] border-black`}>
                 {/* SVG Background */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-20">
                   <Image
@@ -30,11 +30,11 @@ export function SportsSection() {
                     alt={`${section.title} background`}
                     width={800}
                     height={100}
-                    className="w-[800px] h-[100px]"
+                    className="w-full h-full max-w-[800px] max-h-[100px] object-contain"
                   />
                 </div>
                 {/* Title Text */}
-                <h2 className="text-2xl sm:text-3xl font-bold text-font-black relative z-10">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-font-black relative z-10 break-words">
                   {section.title}
                 </h2>
               </div>
@@ -42,10 +42,10 @@ export function SportsSection() {
             
             <Link 
               href={`/sports/${section.sport}`} 
-              className="text-font-blue hover:text-[#B70BF5] transition-colors flex items-center gap-2"
+              className="text-font-blue hover:text-[#B70BF5] transition-colors flex items-center gap-2 self-start sm:self-auto"
             >
               <span className="text-sm sm:text-base">More on {section.title}</span>
-              <ChevronRightIcon className="w-6 h-6" />
+              <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </Link>
           </div>
 
