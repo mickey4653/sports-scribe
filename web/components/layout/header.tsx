@@ -3,15 +3,15 @@ import CategorySection from '../ui/category-section'
 
 export function Header() {
   const list_of_links = [
-    { link_label: 'Home', link_path: '/' },
-    { link_label: 'Sport', link_path: '/' },
+    { link_label: 'NBA', link_path: '/' },
+    { link_label: 'NFL', link_path: '/' },
+    { link_label: 'MLB', link_path: '/' },
+    { link_label: 'NHL', link_path: '/' },
+    { link_label: 'Soccer', link_path: '/' },
     { link_label: 'Scribe', link_path: '/' },
-    { link_label: 'Scribe', link_path: '/' },
-    { link_label: 'Scribe', link_path: '/' },
-    { link_label: 'Scribe', link_path: '/' },
-    { link_label: 'Scribe', link_path: '/' },
-    { link_label: 'Scribe', link_path: '/' },
-    { link_label: 'Scribe', link_path: '/' },
+    { link_label: 'Tennis', link_path: '/' },
+    { link_label: 'Golf', link_path: '/' },
+    { link_label: 'Cricket', link_path: '/' },
   ]
 
   return (

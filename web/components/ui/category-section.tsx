@@ -44,7 +44,7 @@ export default function CategorySection({list_of_links} : BarLinks){
 export  function SingleLink ({link_label, link_path} : SingleLinkProps ){
 
     const singlelink_style = ` text-center border-[#ffffff] border rounded-xl p-[0.5em]
-                             w-[100px] min-w-max  hover:bg-[#f97416f9] hover:text-[#333333]` ;
+                             w-[100px] min-w-max  hover:bg-[#f97416f9] text-white hover:text-white` ;
     return (
         <Link className={singlelink_style} href={link_path}> {link_label} </Link>
     )
