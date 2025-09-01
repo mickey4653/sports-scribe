@@ -16,7 +16,7 @@ module.exports = {
         'work-sans': ['Work Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        'footer-bg': '#333333',
+        'footer-bg': '#2563EB',
         'sport-blue': '#2563EB',
         'sport-dark': '#333333',
         'sport-orange': '#F97316',
@@ -28,7 +28,6 @@ module.exports = {
         'font-blue': '#2563EB',
         'bottom-corner-orange': '#F59E0B',
         'bottom-corner-green': '#10B981',
-        'footer-bg': '#333333',
         'highlight-bg': '#333333',
         'orange': {
           500: '#f97316',
