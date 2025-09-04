@@ -7,7 +7,7 @@ export function Header() {
     { link_label: 'NFL', link_path: '/' },
     { link_label: 'MLB', link_path: '/' },
     { link_label: 'NHL', link_path: '/' },
-    { link_label: 'Soccer', link_path: '/' },
+    { link_label: 'Soccer', link_path: '/sports/soccer' },
     { link_label: 'Scribe', link_path: '/' },
     { link_label: 'Tennis', link_path: '/' },
     { link_label: 'Golf', link_path: '/' },
