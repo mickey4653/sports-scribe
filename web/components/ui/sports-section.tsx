@@ -15,7 +15,7 @@ export function SportsSection() {
   };
 
   return (
-    <section className="max-w-[1024px] mx-auto py-8 sm:py-12 px-4 font-inter">
+    <section className="w-full py-8 sm:py-12 px-4 font-inter">
       {sportsSections.map((section) => (
         <div key={section.sport} className="mb-12 last:mb-0">
           {/* Header Bar */}
