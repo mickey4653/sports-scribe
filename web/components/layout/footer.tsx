@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="py-8 mt-auto">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="w-full py-8 mt-auto">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="bg-footer-bg rounded-full sm:rounded-full py-4 sm:py-6 px-4 sm:px-6 md:px-8 shadow-lg">
           {/* Mobile Layout - Stacked */}
           <div className="flex flex-col space-y-4 md:hidden">

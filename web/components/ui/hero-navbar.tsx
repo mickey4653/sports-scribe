@@ -27,6 +27,16 @@ export function HeroNavbar() {
     { name: "Highlights", href: "/highlights" },
   ];
 
+  const desktopMenuItems = [
+    { name: "NBA", href: "/sports/nba" },
+    { name: "NFL", href: "/sports/nfl" },
+    { name: "MLB", href: "/sports/mlb" },
+    { name: "NHL", href: "/sports/nhl" },
+    { name: "Soccer", href: "/sports/soccer" },
+    { name: "Tennis", href: "/sports/tennis" },
+    { name: "Golf", href: "/sports/golf" },
+  ];
+
   // Close menu when clicking outside or on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -54,19 +64,18 @@ export function HeroNavbar() {
         className="bg-sport-blue shadow-sm py-2 sm:py-4 relative z-50" 
         onMenuOpenChange={setIsMenuOpen}
         isMenuOpen={isMenuOpen}
+        maxWidth="full"
       >
-        {/* Left side - Logo */}
-        <NavbarContent>
-          <NavbarBrand>
+        <div className="w-full flex items-center justify-between px-4">
+          {/* Left side - Logo */}
+          <div className="flex-shrink-0">
             <Link as={NextLink} href="/" className="text-inherit">
               <LogoWithShapes />
             </Link>
-          </NavbarBrand>
-        </NavbarContent>
+          </div>
 
-        {/* Center - Search Bar */}
-        <NavbarContent justify="center" className="flex-1 max-w-xs sm:max-w-sm md:max-w-md mx-2 sm:mx-4">
-          <NavbarItem className="w-full">
+          {/* Center - Search Bar */}
+          <div className="flex-1 flex justify-center max-w-md mx-8">
             <Input
               placeholder="Search..."
               startContent={<SearchIcon className="w-3 h-3 sm:w-4 sm:h-4" />}
@@ -77,12 +86,10 @@ export function HeroNavbar() {
                 inputWrapper: "bg-white opacity-90 hover:opacity-100 transition-opacity rounded-full",
               }}
             />
-          </NavbarItem>
-        </NavbarContent>
+          </div>
 
-        {/* Right side - Hamburger Menu */}
-        <NavbarContent justify="end">
-          <NavbarItem>
+          {/* Right side - Hamburger Menu */}
+          <div className="flex-shrink-0">
             <Button
               isIconOnly
               variant="light"
@@ -90,7 +97,6 @@ export function HeroNavbar() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
-              {/* Custom Hamburger Icon */}
               <div className="w-6 h-6 flex flex-col justify-center items-center">
                 <span 
                   className={`block h-0.5 w-6 bg-current transition-all duration-300 ${
@@ -109,8 +115,8 @@ export function HeroNavbar() {
                 />
               </div>
             </Button>
-          </NavbarItem>
-        </NavbarContent>
+          </div>
+        </div>
       </Navbar>
 
       {/* Side Menu Overlay */}

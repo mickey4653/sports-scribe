@@ -21,7 +21,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="max-w-[1024px] mx-auto h-[413px] flex justify-center gap-6 p-8 bg-sport-dark">
+    <section className="w-full h-[413px] flex justify-center gap-6 p-8 bg-sport-dark">
       {/* Left Box - Horizontal Slider (2/3 width) */}
       <div className="w-4/6 relative">
         <div className="relative h-[340px] overflow-hidden rounded-3xl bg-gray-200">

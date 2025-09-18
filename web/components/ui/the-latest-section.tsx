@@ -7,7 +7,7 @@ import { latestArticles } from '../../data/latest-articles';
 
 export function TheLatestSection() {
   return (
-    <section className="max-w-[1024px] mx-auto py-8 sm:py-12 px-4 font-inter">
+    <section className="w-full py-8 sm:py-12 px-4 font-inter">
       {/* Title and Underline */}
       <div className="mb-6 sm:mb-8 flex items-center">
         <h2 className="text-2xl sm:text-3xl text-gray-900">
