@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 
+import { SportHeaderCard, SportNewsCard } from "./sports-pages-components";
+import { soccer_header_data, premier_league_data } from "@/data/soccer-page-data"; 
+
 interface SportArticleHeaderProps{
   args : {
     logo ?: string;
@@ -12,16 +15,7 @@ interface SportArticleHeaderProps{
   };
 }
 
-interface SportNewsCardProps {
-  args : {
-    background_img ?: string;
-    sport_name : string;
-    date : string;
-    content_title : string;
-    col_span : string;
-  };
-  className ?:string;
-}
+
 
 interface MatchResultProps {
   args : {
@@ -71,43 +65,42 @@ interface TiktokIntegrationArgs {
 }
 
 
+
+
+
+
 /**Main */
 export default function SoccerPage() {
 
     return (
-        <>
-            <SoccerHeader/>
-            <PremierLeague/>
-            <PremierSpotlights/>
-            <BehindScene/>
-            <LaLiga/>
-            <TransferNews/>
-            <OpinionCorner/>
-            <Nwsl/>
-        </>
+      <main className="px-8 bg-white">
+          <SoccerHeader />
+          <PremierLeague/>
+          <PremierSpotlights/>
+          <BehindScene/>
+          <LaLiga/>
+          <TransferNews/>
+          <OpinionCorner/>
+          <Nwsl/>
+      </main>
     )
 
 }
 
 
-function SoccerHeader(){
-
-    return (
-        <section className=" flex justify-center ">
-
-            <div className=" rounded-2xl flex justify-end mx-3 mt-7 w-[95dvw] h-[20dvh] bg-cover bg-no-repeat bg-center bg-[url(https://cdn.britannica.com/51/190751-050-147B93F7/soccer-ball-goal.jpg)] ">
-
-                <h2 className=" min-h-fit rounded-3xl bg-sport-purple w-[5em] min-w-fit text-center text-4xl p-2 my-2 mr-20 self-center"> Soccer </h2>
-
-            </div>
-
-        </section>
-
-    );
-
+/**
+ * Header card of the page.
+ */
+function SoccerHeader() {
+  return (
+    <SportHeaderCard args={ soccer_header_data?.args }
+    />
+  );
 }
 
-/** Premier League section */
+/** 
+ * Premier League section 
+*/
 function PremierLeague (){
 
   const header_args = {
@@ -152,9 +145,9 @@ function PremierLeague (){
     content_title : 'Arsenal At Manchester United',
     col_span :'col-span-1',
   }
-  
+
   return (
-    <Card className="m-6">
+    <Card className="my-6">
       <CardHeader className="flex justify-between pl-5 pr-5">
         <SportArticleHeader args={header_args}/>
       </CardHeader>
@@ -670,30 +663,13 @@ function SportArticleHeader({args} : SportArticleHeaderProps){
   );
 }
 
-/**Sports articles card */
-function SportNewsCard ({args, className} : SportNewsCardProps) {
 
-  return (
 
-    <div className= {` md:h-[50dvh] lg:h-[60dvh] rounded-xl ${className} ${args.col_span} ${(args.background_img === undefined )? 'bg-sport-dark' : args.background_img  } lg:bg-top bg-cover bg-center bg-no-repeat `}>
+/**------------------------- Composant réutilisable par différent sport */
 
-      <div className="h-full rounded-xl grid grid-rows-3 p-5 bg-gradient-to-t from-[#0a0c0e8a] from-10% to-transparent to-90%">
 
-        <div className="row-span-1"> </div>
 
-        <div className="row-span-2 backdrop-blur-sm backdrop-opacity-50 flex flex-col text-white justify-end">
 
-          <h2 className="rounded-3xl bg-sport-purple w-[5em] min-w-fit text-center p-2 m-2"> {args.sport_name} </h2>
 
-          <h3 className="m-2 md:text-medium sm:text-sm w-fit"> {args.date} </h3>
 
-          <h3 className="m-2 md:text-medium sm:text-sm w-fit font-semibold">{args.content_title} </h3>
 
-        </div>
-
-      </div>
-
-    </div>
-
-  );
-}
