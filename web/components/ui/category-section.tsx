@@ -26,7 +26,7 @@ export interface BarLinks {
 /** Component for the category section */
 export default function CategorySection({list_of_links} : BarLinks){
 
-    const categorysection_style = ` flex justify-around p-[1em] border-b-[5px] border-b-[#f97316] bg-[#333333] overflow-auto  ` ; 
+    const categorysection_style = ` flex justify-around p-[1em] bg-[#333333] overflow-auto  ` ; 
     let count = -1;
     return (
         <div className={categorysection_style}>
@@ -44,7 +44,7 @@ export default function CategorySection({list_of_links} : BarLinks){
 export  function SingleLink ({link_label, link_path} : SingleLinkProps ){
 
     const singlelink_style = ` text-center border-[#ffffff] border rounded-3xl p-[0.5em]
-                             w-[100px] min-w-max  hover:bg-[#f97416f9] text-white hover:text-white` ;
+                             w-[100px] min-w-max  hover:bg-sport-blue text-white hover:text-white` ;
     return (
         <Link className={singlelink_style} href={link_path}> {link_label} </Link>
     )
