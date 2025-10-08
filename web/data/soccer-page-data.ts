@@ -1,7 +1,6 @@
 import { SportHeaderCardArgs, SportNewsCardProps, 
          SportNewsSMCardProps, PremierSpotlightsProps 
-} from "@/components/sports/sports-pages-components";
-import { u } from "framer-motion/client";
+} from "@/components/sports/main-components-interfaces";
 
 export const soccer_header_data : SportHeaderCardArgs = {
        args : {

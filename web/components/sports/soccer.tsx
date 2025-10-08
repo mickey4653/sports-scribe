@@ -3,17 +3,14 @@ import { Suspense } from "react";
 
 import { SportPageHeaderCard, SportNewsCard, SportArticleHeader,
          SportNewsSMCard, MatchResult, NextMatch, LeaguePosition,
-
-} from "./sports-pages-components";
+} from "./main-components";
 
 import { soccer_header_data, premier_league_data, section_cards_header,
          laliga_data, SportNewsCardDefaultData,
          transfer_data, nwsl_data, opinion_corner_data,
          SportNewsSMCardDefaultData, spotlight_principal_team_data,
          premier_spotlight_data, premierspotlightDefaultData,
-
 } from "@/data/soccer-page-data"; 
-
 
 
 interface TiktokIntegrationArgs {
@@ -23,7 +20,6 @@ interface TiktokIntegrationArgs {
   };
   className ?: string;
 }
-
 
 /**Main */
 export default function SoccerPage() {
@@ -35,19 +31,15 @@ export default function SoccerPage() {
         <PremierLeague/>
         <PremierSpotlights/>
         <LaLiga/>
+        <BehindScene/>
         <TransferNews/>
         <OpinionCorner/>
         <Nwsl/>
          
-        {/**
-          
-          <BehindScene/>
-        */}
       </main>
     )
 
 }
-
 
 /**
  * Header card of the page.
@@ -148,7 +140,7 @@ function BehindScene (){
   } ;
 
   return (
-    <Card className="m-6 bg-black">
+    <Card className="my-6 bg-black">
       <CardHeader className="flex justify-center py-5 ">
         <h1 className="text-3xl font-bold mb-8 capitalize mt-3 text-white"> Behind The Scene </h1>
       </CardHeader>
@@ -244,9 +236,6 @@ function PremierSpotlights(){
   );
 }
 
-
-
-
 async function TiktokIntegration( {args, className} : TiktokIntegrationArgs ){
 
   //tiktok video html code
@@ -274,7 +263,3 @@ async function fetchTiktok(url : String){
   return tiktok_video ;
 
 }
-
-
-
-

@@ -1,131 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
-
-export interface SportHeaderCardArgs {
-
-  /**Provide the data for the {@link SportHeaderCard} component */
-  args : {
-    /** Background image
-     * * The url of the of the background image
-    */
-    image_url : string ,
-
-    /** The color representing the type of sport
-     * * I recommend you provide the Hex code
-     */
-    sport_color : 'sport-blue' | 'sport-dark' | 'sport-orange' | 'sport-green' | 'sport-yellow' | 'sport-brown' | 'sport-purple' ,
-
-    /** The name of the sport */
-    sport_name : string,
-
-  } ;
-
-  /**Provide the style for the card (preferably tailwind css style) 
-   * * This is optional because the component {@link SportHeaderCard}
-   * contains a default tailwind style. 
-   * * If you decide to provide your custom style, please note that it will
-   * override the default style.
-  */
-  className ?: string;
-}
-
-export interface SportArticleHeaderProps{
-  args : {
-    /**
-     * The url for the section logo
-     */
-    logo_url ?: string;
-    /**
-     * The title of the section
-     */
-    title : string;
-    /**
-     * The link to the full article page
-     */
-    fullarticlelink : string;
-
-  };
-}
-
-export interface SportNewsCardProps {
-  args : {
-    background_img_url ?: string;
-    sport_name : string;
-    sport_theme_color ?: 'sport-blue' | 'sport-dark' | 'sport-orange' | 'sport-green' | 'sport-yellow' | 'sport-brown' | 'sport-purple',
-    date : string;
-    content_title : string;
-    col_span : string;
-  };
-
-  /**Provide the style for the card (preferably tailwind css style) 
-   * * This is optional because the component {@link SportNewsCard}
-   * contains a default tailwind style. 
-   * * If you decide to provide your custom style, please note that it will not override
-   * the default style. It will be add to the default one.
-  */
-  className ?:string;
-}
-
-export interface SportNewsSMCardProps {
-  args:{
-    background_img_url ?: string,
-    spotlight_title : string,
-    spotlight_info : string,
-  } ;
-  className ?: string ;
-}
-
-export interface MatchResultProps {
-  args : {
-    team1_logo : string,
-    team1_name : string,
-    team1_goals : number,
-    team2_logo : string,
-    team2_name : string,
-    team2_goals : number,
-}
-}
-
-export interface NextMatchProps {
-  args : {
-    team1_logo : string,
-    team1_name : string,
-    game_date : string,
-    game_hour : string,
-    team2_logo : string,
-    team2_name : string,
-  }
-}
-
-export interface LeaguePositionProps {
-  args : {
-    team_logo : string,
-    team_name : string,
-    team_rank : string,
-  }
-}
-
-export interface PremierSpotlightsProps {
-
-  /** Principal team */
-  principal_team :  SportNewsCardProps ;
-
-  last_match_result : MatchResultProps ;
-
-  next_match : NextMatchProps ;
-
-  league_position : LeaguePositionProps ;
-
-  spotight_info_1 : SportNewsSMCardProps ;
-
-  spotight_info_2 : SportNewsSMCardProps ;
-
- }
-
-
-
-
+import { SportHeaderCardArgs, SportArticleHeaderProps, SportNewsCardProps,SportNewsSMCardProps,
+MatchResultProps, NextMatchProps, LeaguePositionProps } from "./main-components-interfaces";
 
 /**
  * Represents the card header of a sport page.
@@ -305,23 +181,6 @@ export function SportNewsSMCard ( {args, className} : SportNewsSMCardProps ){
   );
 }
 
-/**Sports news card */
-export function SportNewsCardBackup ({args, className} : SportNewsCardProps) {
-
-  return (
-    <div className= {` sm:h-auto md:h-auto lg:h-[42.8vh] rounded-xl ${(className === undefined) ? ' ' : className} ${args.col_span} ${(args.background_img_url === undefined )? 'bg-sport-dark' : args.background_img_url  } lg:bg-top bg-cover bg-center bg-no-repeat `}>
-      <div className="h-full rounded-xl grid grid-rows-3 px-5 bg-gradient-to-t from-[#0a0c0e8a] from-10% to-transparent to-90%">
-        <div className="row-span-1"> </div>
-        <div className="row-span-2 backdrop-blur-sm backdrop-opacity-50 flex flex-col text-white justify-end">
-          <h2 className={` rounded-3xl ${args.sport_theme_color} w-[5em] min-w-fit text-center p-2 m-2 `}> {args.sport_name} </h2>
-          <h3 className="m-2 md:text-medium sm:text-sm w-fit"> {args.date} </h3>
-          <h3 className="m-2 md:text-medium sm:text-sm w-fit font-semibold">{args.content_title} </h3>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function MatchResult({args} : MatchResultProps){
 
   return (
@@ -394,7 +253,5 @@ export function LeaguePosition({args} : LeaguePositionProps){
       <span className="mr-5"> {args.team_rank}</span>
     </div>
   );
+
 }
-
-
-
