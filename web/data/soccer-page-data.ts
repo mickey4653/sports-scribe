@@ -242,6 +242,13 @@ export const opinion_corner_data : SportNewsSMCardProps [] = [
 
     },
 
+    {
+        args : {
+            spotlight_title : "Hot Take : Neymar Overrated This Season ? ",
+            spotlight_info : "Despite the flashy dribbles, Neymar's goal involvement has dropped 18% from last season. ",
+        }
+
+    },
 
 ];
 

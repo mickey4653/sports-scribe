@@ -12,6 +12,9 @@ import { soccer_header_data, premier_league_data, section_cards_header,
          premier_spotlight_data, premierspotlightDefaultData,
 } from "@/data/soccer-page-data"; 
 
+import Carousel from "@/components/ui/carousel";
+
+
 
 interface TiktokIntegrationArgs {
   args : {
@@ -30,8 +33,8 @@ export default function SoccerPage() {
         <SoccerHeader />
         <PremierLeague/>
         <PremierSpotlights/>
-        <LaLiga/>
         <BehindScene/>
+        <LaLiga/>
         <TransferNews/>
         <OpinionCorner/>
         <Nwsl/>
@@ -82,11 +85,14 @@ function LaLiga(){
         <SportArticleHeader args={section_cards_header.la_liga.args}/>
       </CardHeader>
       <CardBody>
-        <section className="h-auto flex flex-nowrap justify-between  overflow-x-auto">
-          <SportNewsCard args={laliga_data[0]?.args || SportNewsCardDefaultData.args} className=" lg:min-w-[60dvw] lg:h-[40dvh] mx-2" />
-          <SportNewsCard args={laliga_data[1]?.args || SportNewsCardDefaultData.args} className=" lg:min-w-[50dvw] lg:h-[40dvh] mx-2"/>
-          <SportNewsCard args={laliga_data[2]?.args || SportNewsCardDefaultData.args} className=" lg:min-w-[50dvw] lg:h-[40dvh] mx-2"/>
-        </section>
+
+        <Carousel>
+          {/** Cards */}
+          { laliga_data.map (item => ( 
+            <SportNewsCard args={item?.args || SportNewsCardDefaultData.args} key = {laliga_data.indexOf(item)} className=" lg:min-w-[60dvw] lg:h-[40dvh] mx-2" />
+          ))}
+        </Carousel>
+
       </CardBody>
     </Card>
   );
@@ -121,11 +127,14 @@ function Nwsl(){
         <SportArticleHeader args={section_cards_header.nwsl.args}/>
       </CardHeader>
       <CardBody>
-        <section className="h-auto flex flex-nowrap justify-between  overflow-x-auto">
-          <SportNewsCard args={nwsl_data[0]?.args || SportNewsCardDefaultData.args} className=" lg:min-w-[40dvw] mx-2" />
-          <SportNewsCard args={nwsl_data[1]?.args || SportNewsCardDefaultData.args} className=" lg:min-w-[40dvw] mx-2"/>
-          <SportNewsCard args={nwsl_data[2]?.args || SportNewsCardDefaultData.args} className=" lg:min-w-[40dvw] mx-2"/>
-        </section>
+
+        <Carousel>
+          {/** Cards */}
+          { nwsl_data.map (item => ( 
+            <SportNewsCard args={item?.args || SportNewsCardDefaultData.args} key = {nwsl_data.indexOf(item)} className=" lg:min-w-[40dvw] mx-2" />
+          ))}
+        </Carousel>
+
       </CardBody>
     </Card>
   );
@@ -170,11 +179,14 @@ function OpinionCorner(){
         <h1 className="text-3xl text-center font-bold mb-8 capitalize mt-3 text-white"> Sports Scribe Opinion Corner </h1>
       </CardHeader>
       <CardBody>
-        <section className="h-auto flex flex-nowrap justify-between  overflow-x-auto">
-          <SportNewsSMCard args={opinion_corner_data[0]?.args || SportNewsSMCardDefaultData.args} className=" lg:min-w-[40dvw] mx-2 md:h-[50dvh] lg:h-[60dvh] " />
-          <SportNewsSMCard args={opinion_corner_data[1]?.args || SportNewsSMCardDefaultData.args} className=" lg:min-w-[40dvw] mx-2 md:h-[50dvh] lg:h-[60dvh] " />
-          <SportNewsSMCard args={opinion_corner_data[1]?.args || SportNewsSMCardDefaultData.args} className=" lg:min-w-[40dvw] mx-2 md:h-[50dvh] lg:h-[60dvh] " />
-        </section>
+
+        <Carousel>
+          {/** Cards */}
+          { opinion_corner_data.map (item => ( 
+            <SportNewsSMCard args={item?.args || SportNewsSMCardDefaultData.args} key = {opinion_corner_data.indexOf(item)} className=" lg:min-w-[40dvw] mx-2 md:h-[50dvh] lg:h-[60dvh] " />
+          ))}
+        </Carousel>
+
       </CardBody>
     </Card>
   );
